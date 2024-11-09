@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Models\User;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -51,7 +51,7 @@ class UserController extends Controller
             'user' => $user
         ], 200);
     }
-    public function getUsers(Request $request, User $user)
+    public function getUsers(Request $request)
     {
         $user = User::all();
         return response()->json([

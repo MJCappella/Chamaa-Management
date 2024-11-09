@@ -3,9 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChamaaController;
+use App\Http\Controllers\LoanController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\InstallmentController;
-
 use App\Http\Controllers\UserController;
 
 /*
@@ -22,10 +22,12 @@ use App\Http\Controllers\UserController;
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
-
+//chamaa routes
 Route::post('/chamaa/create', [ChamaaController::class, 'CreateChamaa'])->name('chamaa.create');
 Route::get('/chamaa/list', [ChamaaController::class,'ListChamaa'])->name('chamaa.list');
-
+//loan routes
+Route::get('/loan/check',[LoanController::class,'GetLoan'])->name('loan.check');
+Route::post('/loan/apply',[LoanController::class,'ApplyLoan'])->name('loan.get');
 // expense routes
 Route::get('/expenses/all', [ExpenseController::class, 'ListExpenses'])->name('expenses.all');
 Route::post('/expenses/create', [ExpenseController::class, 'CreateExpense'])->name('expenses.create');
@@ -38,12 +40,11 @@ Route::post('/installments/make', [InstallmentController::class, 'makeInstallmen
 Route::get('/installments/all', [InstallmentController::class, 'getAllInstallments'])->name('installments.all');
 Route::get('/installments/user/{user_id}', [InstallmentController::class, 'getInstallmentsByUserId'])->name('installments.user');
 Route::get('/installments/loan/{loan_id}', [InstallmentController::class, 'getInstallmentsByLoanId'])->name('installments.loan');
-
-
-
+//user routes
 Route::get('/users/list', [UserController::class,'getUserById'])->name('user.list');
 Route::post('/users/createUser', [UserController::class,'createUser'])->name('user.create');
 Route::delete('/users/delete', [UserController::class,'deleteUser'])->name('user.delete');
 Route::put('/users/update', [UserController::class,'updateUser'])->name('user.update');
 Route::delete('/users/deletebyid', [UserController::class,'deleteUserById'])->name('user.update');
 Route::get('/users/all', [UserController::class,'getUsers'])->name('user.all');
+

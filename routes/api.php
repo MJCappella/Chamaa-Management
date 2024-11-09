@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChamaaController;
 use App\Http\Controllers\ExpenseController;
+use App\Http\Controllers\InstallmentController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -28,3 +30,11 @@ Route::post('/expenses/create', [ExpenseController::class, 'CreateExpense'])->na
 Route::get('/expenses/view/{id}', [ExpenseController::class, 'ViewExpense'])->name('expenses.view');
 Route::put('/expenses/update/{id}', [ExpenseController::class, 'UpdateExpense'])->name('expenses.update');
 Route::delete('/expenses/delete/{id}', [ExpenseController::class, 'DeleteExpense'])->name('expenses.delete');
+
+//installments routes
+Route::post('/installments/make', [InstallmentController::class, 'makeInstallment'])->name('installments.make');
+Route::get('/installments/all', [InstallmentController::class, 'getAllInstallments'])->name('installments.all');
+Route::get('/installments/user/{user_id}', [InstallmentController::class, 'getInstallmentsByUserId'])->name('installments.user');
+Route::get('/installments/loan/{loan_id}', [InstallmentController::class, 'getInstallmentsByLoanId'])->name('installments.loan');
+
+

@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Traits\hasMany   ;
+use App\Models\Loan;
+use App\Models\Contribution;
+use App\Models\Chamaa;
 
 class User extends Authenticatable
 {
@@ -42,4 +46,26 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function Loans()
+    {
+        return $this->hasMany(Loan::class);
+    }
+
+    public function Contributions()
+    {
+        return $this->hasMany(Contribution::class);
+    }
+
+    public function Users()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function Chamaa()
+    {
+        return $this->hasOne(Chamaa::class);
+    }
+
+
 }

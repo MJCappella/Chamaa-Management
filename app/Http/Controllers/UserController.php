@@ -20,13 +20,13 @@ class UserController extends Controller
 
     public function CreateUser(Request $request){
         $data = $request->all();
-        try{
+        
             $user = User::create($data);
             return response()->json([
                 'message'=>'User created sucessfully',
                 'user' => $user
             ], 200);
-    }
+    
  
-}
+    }
 }

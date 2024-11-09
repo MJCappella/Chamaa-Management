@@ -47,9 +47,17 @@ class UserController extends Controller
     {
         $user->find($user->id);
         return response()->json([
-            'message'=> 'User retrieved by Id',
-            'user'=> $user
-            ], 200);
-        }
+            'message' => 'User retrieved by Id',
+            'user' => $user
+        ], 200);
+    }
+    public function getUsers(Request $request, User $user)
+    {
+        $user = User::all();
+        return response()->json([
+            'message'=> 'List of all users',
+            'All users'=> $user
+            ],200);
+    }
 
 }

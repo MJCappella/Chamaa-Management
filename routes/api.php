@@ -3,7 +3,6 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChamaaController;
-use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\UserController;
 
 /*

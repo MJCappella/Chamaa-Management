@@ -15,7 +15,7 @@ class Loan extends Model
         'DueDate',
         'ClearanceDate ',
         'InterestRate',
-        ' LoanTerm',
+        'LoanTerm',
         'Status',
         'user_id'
     ];

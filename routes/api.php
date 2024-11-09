@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChamaaController;
+use App\Http\Controllers\LoanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 
 Route::post('/chamaa/create', [ChamaaController::class, 'CreateChamaa'])->name('chamaa.create');
 Route::get('/chamaa/list', [ChamaaController::class,'ListChamaa'])->name('chamaa.list');
+Route::get('/loan/check',[LoanController::class,'GetLoan'])->name('loan.check');
+Route::post('/loan/apply',[LoanController::class,'ApplyLoan'])->name('loan.get');
+

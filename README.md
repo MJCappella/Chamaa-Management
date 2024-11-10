@@ -19,6 +19,12 @@
    mv .env.example.env .env
   ~~~
 + Edit the .env file to include your Database Configurations
+  ~~~
+  DB_HOST =
+  DB_USER =
+  DB_NAME =
+  DB_PASSWD =
+  ~~~
 + Install the project dependencies
   ~~~
   composer install

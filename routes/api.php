@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContributionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChamaaController;
@@ -47,3 +48,7 @@ Route::delete('/users/delete', [UserController::class,'deleteUser'])->name('user
 Route::put('/users/update', [UserController::class,'updateUser'])->name('user.update');
 Route::delete('/users/deletebyid', [UserController::class,'deleteUserById'])->name('user.update');
 Route::get('/users/all', [UserController::class,'getUsers'])->name('user.all');
+
+Route::post('/contribution/new', [ContributionController::class,'makeContribution'])->name('contribution.new');
+Route::put('/contribution/update', [ContributionController::class,'updateContribution'])->name('contribution.update');
+Route::get('/contribution/all', [ContributionController::class,'getContributions'])->name('contribution.get');

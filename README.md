@@ -7,3 +7,8 @@
 + Managing expenditures of the chamaa
 + loan repayment in installments
 + Remittance management like making savings or buying shares
+
+
+## Setting up the project
++ clone the repo
+  ``` git clone https://github.com/MJCappella/Chamaa-Management.hit```

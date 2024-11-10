@@ -1,6 +1,7 @@
 ## Chamaa Management APIs
-
-+ A set of APIs that can be used to manage a chamaa or a mini sacco. With several functionalities like:
+    A set of APIs that can be used to manage a chamaa or a mini sacco. 
+    
+## System unctionalities:
 + Registering a chamaa
 + Adding members to a chamaa
 + Loan application by members and approval by the administrators
@@ -18,7 +19,7 @@
   ~~~
    mv .env.example.env .env
   ~~~
-+ Edit the .env file to include your Database Configurations
++ Edit the .env file to include your Database Configurations e.g
   ~~~
   DB_HOST =
   DB_USER =

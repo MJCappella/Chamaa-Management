@@ -44,3 +44,11 @@ A set of APIs that can be used to manage a chamaa or a mini sacco.
   ~~~
   http://localhost:8000/api/{...}
   ~~~
+
+  ## APi Documentation URL
+  ~~~
+  http://localhost/api/documentation
+  ~~~
+
+
+@##

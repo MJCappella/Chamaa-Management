@@ -13,5 +13,7 @@
 + Clone the repo
   ``` git clone https://github.com/MJCappella/Chamaa-Management.hit```
 + Rename the .env.example file to .env
-  ~~ mv .env.example.env .env ~~
+  ~~~
+   mv .env.example.env .env
+  ~~~
   

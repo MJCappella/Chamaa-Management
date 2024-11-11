@@ -9,6 +9,10 @@ class Installment extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'Amount',
+        'loan_id'
+    ];
     public function loan()
     {
         return $this->belongsTo(Loan::class);

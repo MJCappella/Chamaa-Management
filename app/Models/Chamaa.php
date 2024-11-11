@@ -13,8 +13,8 @@ class Chamaa extends Model
         'ChamaaName',
         'email',
         'PhoneNumber',
-        'Password',
-      
+        'password',
+
     ];
 
     public function expenses()
@@ -26,7 +26,7 @@ class Chamaa extends Model
     {
         return $this->hasMany(User::class);
     }
-    
+
     public function chamaa()
     {
         return $this->belongsTo(Chamaa::class);
